@@ -4,7 +4,7 @@ Jenkins Docker pipeline to deploy a HTML page in dockerized tomcat
 The idea is to run a container socat in parallel to jenkins container. The socat container mounts the /var/run/docker.run 
 and listens at port 2375.
 
-From jenkins using docker-workflow plugin and passing the docker URI to communicate to port 2375. 
+From jenkins using docker-pipeline plugin and passing the docker URI to communicate to port 2375. 
 This way we can invoke docker inside jenkins docker container.
 
 Example:
