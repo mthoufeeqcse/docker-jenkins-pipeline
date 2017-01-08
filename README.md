@@ -16,4 +16,4 @@ withDockerServer([uri: 'tcp://10.118.56.21:2375']) { }
 docker run -d -v /var/run/docker.sock:/var/run/docker.sock -p 2375 verb/socat:alpine tcp-listen:2375,reuseaddr,fork unix:/var/run/docker.sock
 
 2. run jenkins container :
-docker run --name pipeline-jenkins -p 8080:8080 -p 50000:50000 -v /var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock pipeline-jenkins
+docker run --name pipeline-jenkins -p 8080:8080 -p 50000:50000 -v /var/jenkins_home -v pipeline-jenkins
